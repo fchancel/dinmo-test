@@ -1,14 +1,11 @@
-from unittest.mock import patch
 from sqlalchemy.orm import Session
 from fastapi import status, HTTPException
 from fastapi.testclient import TestClient
-from unittest import mock
 
 from ..schemas import AveragePerCountrySchema, PeopleSchema, PeopleListSchema, NbPeoplePerCountrySchema, GenderRepartitionInCountrySchema
 from ..routes import create_people
 from ..models import People
 from main import api
-import pytest
 
 
 client = TestClient(api)
