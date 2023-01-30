@@ -1,0 +1,15 @@
+FROM python:3.10.6-bullseye
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+COPY requirements-dev.txt requirements-dev.txt
+
+RUN pip install -r requirements.txt 
+RUN pip install -r requirements-dev.txt
+
+COPY config.py config.py
+COPY api api
+COPY main.py main.py
+
+ENTRYPOINT ["/bin/sh", "-c", "pytest --cov --rootdir=/app/api"]

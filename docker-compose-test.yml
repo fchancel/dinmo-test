@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    test:
+        container_name: dinmo_test
+        build:
+          context: .
+          dockerfile: .docker/Dockerfile.test
+        environment:
+          - TEST=true
