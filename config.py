@@ -9,8 +9,8 @@ log = logging.getLogger('uvicorn')
 
 
 class Settings(BaseSettings):
-    app_title: str = "DINMO API"
-    app_description: str = "A Crazy API for Dinmo"
+    app_title: str = "EXAMPLE API"
+    app_description: str = "A Crazy API"
     documentation_url: str = "/docs"
     test: bool = environ.get("TEST")
     db_url: str = "sqlite:///db/people.db"
