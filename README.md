@@ -1,4 +1,4 @@
-# dinmo-test
+# FastAPI Example
 
 This api project was done with FastAPI, Pydantic and Docker. It is composed of an api, a swagger documentation and unit tests.
 
